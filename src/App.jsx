@@ -1,6 +1,7 @@
 import './App.css';
 import Clock from './components/Clock';
 import React, { Component } from 'react';
+import FuncitonalClock from './components/FuncitonalClock';
 
 class App extends Component {
 
@@ -16,6 +17,8 @@ class App extends Component {
    }, 1000);
  }
 
+ 
+
    setClock = () =>{
     
       const currentDate = new Date();
@@ -30,11 +33,13 @@ class App extends Component {
   
 
   render(){
-    const {secondRatio, minuteRatio, hourRatio} = this.state
+   const {secondRatio, minuteRatio, hourRatio} = this.state
     return (
       <div>
-       <h1 className='titapp'>RELOJ ANALOGICO</h1>
+       <h1 className='titapp'>RELOJ ANALOGICO con clases</h1>
        <Clock secondRatio={secondRatio} minuteRatio={minuteRatio} hourRatio={hourRatio}/>
+       <h1 className='titapp'>RELOJ ANALOGICO con mucha ayuda</h1>
+       <FuncitonalClock />
       </div>
     );
   }
